@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "测试网络代理..." | tee -a /home/immortalwrt-auto/log.txt
+echo "测试网络代理..."
 if ping -c 1 192.168.10.10 &> /dev/null; then
     echo "代理地址有效 - 设置代理"
     echo "设置本地网络代理：192.168.10.10:7890"
