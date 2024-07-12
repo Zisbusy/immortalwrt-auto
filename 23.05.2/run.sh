@@ -76,7 +76,7 @@ export FORCE_UNSAFE_CONFIGURE=1
 echo "获取 CPU 核心数" | tee -a /home/immortalwrt-auto/log.txt
 num=`cat /proc/cpuinfo |grep processor  | wc -l` 
 echo "开始编译 - "$num"线程" | tee -a /home/immortalwrt-auto/log.txt
-# make -j$num V=s
+make -j$num V=s
 
 # 计算时间并输出
 endTime=$(date +%Y%m%d-%H:%M:%S)
