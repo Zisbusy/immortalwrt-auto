@@ -62,6 +62,9 @@ echo "复制编译配置文件..." | tee -a /home/immortalwrt-auto/log.txt
 if [ "$1" == "x86" ] ;then
 cp -rf /home/immortalwrt-auto/23.05.2/config/x86/.config /home/immortalwrt/
 fi
+if [ "$1" == "erx" ] ;then
+cp -rf /home/immortalwrt-auto/23.05.2/config/erx/.config /home/immortalwrt/
+fi
 
 # 执行脚本
 echo "定位到 OpenWrt 工作目录：/home/immortalwrt" | tee -a /home/immortalwrt-auto/log.txt
