@@ -48,6 +48,7 @@ echo "安装主题 Argon..." | tee -a /home/immortalwrt-auto/log.txt
 cp -rf /home/immortalwrt-auto/23.05.2/package/luci-theme-argon/ /home/immortalwrt/package/
 
 echo "删除访问主页跳转提示文案..." | tee -a /home/immortalwrt-auto/log.txt
+rm -rf /home/immortalwrt/feeds/luci/modules/luci-base/root/www/index.html
 cp -rf /home/immortalwrt-auto/23.05.2/package/luci/index.html /home/immortalwrt/feeds/luci/modules/luci-base/root/www/
 
 echo "设置：时区 Asia/Shanghai、NTP 服务器、默认网关..." | tee -a /home/immortalwrt-auto/log.txt
