@@ -44,9 +44,9 @@ echo "安装下载好的包..." | tee -a /home/immortalwrt-auto/log.txt
 
 echo "安装一些第三方包和一些设置..." | tee -a /home/immortalwrt-auto/log.txt
 
-echo "安装主题 Argon..." | tee -a /home/immortalwrt-auto/log.txt
-rm -rf /home/immortalwrt/feeds/luci/themes/luci-theme-argon/
-cp -rf /home/immortalwrt-auto/23.05.2/package/luci-theme-argon/ /home/immortalwrt/feeds/luci/themes/
+# echo "安装主题 Argon..." | tee -a /home/immortalwrt-auto/log.txt
+# rm -rf /home/immortalwrt/feeds/luci/themes/luci-theme-argon/
+# cp -rf /home/immortalwrt-auto/23.05.2/package/luci-theme-argon/ /home/immortalwrt/feeds/luci/themes/
 
 echo "删除访问主页跳转提示文案..." | tee -a /home/immortalwrt-auto/log.txt
 rm -rf /home/immortalwrt/feeds/luci/modules/luci-base/root/www/index.html
@@ -81,7 +81,7 @@ export FORCE_UNSAFE_CONFIGURE=1
 echo "获取 CPU 核心数" | tee -a /home/immortalwrt-auto/log.txt
 num=`cat /proc/cpuinfo |grep processor  | wc -l` 
 echo "开始编译 - "$num"线程" | tee -a /home/immortalwrt-auto/log.txt
-make -j$num V=s
+# make -j$num V=s
 
 # 计算时间并输出
 endTime=$(date +%Y%m%d-%H:%M:%S)
