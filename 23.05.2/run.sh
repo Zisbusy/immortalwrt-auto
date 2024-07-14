@@ -52,15 +52,20 @@ echo "删除访问主页跳转提示文案..." | tee -a /home/immortalwrt-auto/l
 rm -rf /home/immortalwrt/feeds/luci/modules/luci-base/root/www/index.html
 cp -rf /home/immortalwrt-auto/23.05.2/package/luci/index.html /home/immortalwrt/feeds/luci/modules/luci-base/root/www/
 
-echo "设置：时区 Asia/Shanghai、NTP 服务器、默认网关..." | tee -a /home/immortalwrt-auto/log.txt
+echo "设置：时区 Asia/Shanghai、NTP 服务器、默认网关、主机名..." | tee -a /home/immortalwrt-auto/log.txt
 rm -rf /home/immortalwrt/package/base-files/files/bin/config_generate
-cp -rf /home/immortalwrt-auto/23.05.2/config/config_generate /home/immortalwrt/package/base-files/files/bin/
+if [ "$1" == "x86" ] ;then
+cp -rf /home/immortalwrt-auto/23.05.2/config/x86/config_generate /home/immortalwrt/package/base-files/files/bin/
+fi
+if [ "$1" == "erx" ] ;then
+cp -rf /home/immortalwrt-auto/23.05.2/config/erx/config_generate /home/immortalwrt/package/base-files/files/bin/
+fi
 chmod 755 /home/immortalwrt/package/base-files/files/bin/config_generate
 
 if [ "$1" == "x86" ] ;then
 echo "设置：WAN口绑定 eth0、LAN口绑定 eth1..." | tee -a /home/immortalwrt-auto/log.txt
 rm -rf /home/immortalwrt/package/base-files/files/etc/board.d/99-default_network
-cp -rf /home/immortalwrt-auto/23.05.2/config/99-default_network /home/immortalwrt/package/base-files/files/etc/board.d/
+cp -rf /home/immortalwrt-auto/23.05.2/config/x86/99-default_network /home/immortalwrt/package/base-files/files/etc/board.d/
 fi
 
 echo "复制编译配置文件..." | tee -a /home/immortalwrt-auto/log.txt
