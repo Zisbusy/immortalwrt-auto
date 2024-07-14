@@ -45,5 +45,5 @@ sysupgrade -F -n 文件名
 
 ## 使用的项目
 
-OpenWrt **https://github.com/openwrt/openwrt**      
+immortalwrt **https://github.com/immortalwrt/immortalwrt**      
 Argon **https://github.com/jerrykuku/luci-theme-argon**      
