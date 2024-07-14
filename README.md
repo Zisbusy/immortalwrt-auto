@@ -22,6 +22,12 @@ curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/Zisbusy/i
 # x86 设备
 curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/Zisbusy/immortalwrt-auto/main/start.sh -o start.sh && sudo bash start.sh x86
 ```
+
+## 刷入
+```
+sysupgrade -F -n 文件名
+```
+
 ## 说明  
 本固件高度自定义，贴近个人使用场景。      
  - 基础上网功能（默认 immortalwrt 配置）       
