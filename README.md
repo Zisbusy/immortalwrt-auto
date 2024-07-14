@@ -7,7 +7,7 @@ immortalwrt 自动化编译脚本
 需要自备代理软件，并修改脚本内 192.168.10.10 的地址（中国大陆地区以外的网络环境可以直接取消代理）
 
 ## 如何使用
-## 一键脚本
+### 一键脚本
 ```
 # Ubiquiti EdgeRouter X
 curl -sSL https://raw.githubusercontent.com/Zisbusy/immortalwrt-auto/main/start.sh -o start.sh && sudo bash start.sh erx
@@ -15,7 +15,7 @@ curl -sSL https://raw.githubusercontent.com/Zisbusy/immortalwrt-auto/main/start.
 curl -sSL https://raw.githubusercontent.com/Zisbusy/immortalwrt-auto/main/start.sh -o start.sh && sudo bash start.sh x86
 ```
 
-## 加速地址
+### 加速地址
 ```
 # Ubiquiti EdgeRouter X
 curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/Zisbusy/immortalwrt-auto/main/start.sh -o start.sh && sudo bash start.sh erx
