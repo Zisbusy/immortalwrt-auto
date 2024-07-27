@@ -19,6 +19,7 @@ LUCI -> Applications -> luci-app-upnp
 
 // 添加主题
 LUCI -> Theme -> Luci-theme-argon
+Network  -> adguardhome
 
 // 内核支持EXT4 x86
 Global Build settings -> Kernel build options  -> Ext4 Security Labels
