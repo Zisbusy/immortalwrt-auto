@@ -41,6 +41,7 @@ sysupgrade -F -n 文件名
  - 调整时区为 Asia/Shanghai
  - 更改 ntp 服务地址
  - 更改默认网关 192.168.10.1
+ - 添加 AdguardHome 默认启用 端口:3000
 
 
 ## 使用的项目
