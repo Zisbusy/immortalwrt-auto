@@ -52,6 +52,10 @@ echo "删除访问主页跳转提示文案..." | tee -a /home/immortalwrt-auto/l
 rm -rf /home/immortalwrt/feeds/luci/modules/luci-base/root/www/index.html
 cp -rf /home/immortalwrt-auto/23.05.2/package/luci/index.html /home/immortalwrt/feeds/luci/modules/luci-base/root/www/
 
+echo "修改 UPnP 默认 ip..." | tee -a /home/immortalwrt-auto/log.txt
+rm -rf /home/immortalwrt/package/feeds/luci/luci-app-upnp/htdocs/luci-static/resources/view/upnp/upnp.js
+cp -rf /home/immortalwrt-auto/23.05.2/package/upnp/upnp.js /home/immortalwrt/package/feeds/luci/luci-app-upnp/htdocs/luci-static/resources/view/upnp/
+
 echo "设置：时区 Asia/Shanghai、NTP 服务器、默认网关、主机名..." | tee -a /home/immortalwrt-auto/log.txt
 rm -rf /home/immortalwrt/package/base-files/files/bin/config_generate
 if [ "$1" == "x86" ] ;then
